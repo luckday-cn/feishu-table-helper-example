@@ -1,12 +1,18 @@
 package cn.isliu.simple;
 
 import cn.isliu.core.BaseEntity;
+import cn.isliu.core.annotation.TableConf;
 import cn.isliu.core.annotation.TableProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@TableConf(headLine = 3, titleRow = 3)
 public class Employee extends BaseEntity {
 
     @TableProperty(value = {"ID", "员工信息", "员工编号"}, order = 0)
